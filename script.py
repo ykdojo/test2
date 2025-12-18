@@ -1,13 +1,14 @@
 import daft
 
-print("Package loaded!")
+print("Script loaded!")
+print(f"Daft version: {daft.__version__}")
 
 
 def main(data: daft.DataFrame) -> daft.DataFrame:
     """Test function that receives the CommonCrawl example dataset."""
     print("main() function called!")
     print("=" * 60)
-    print("Testing CommonCrawl Example Dataset")
+    print("Testing CommonCrawl Example Dataset (via injection)")
     print("=" * 60)
 
     print("\nSchema:")
