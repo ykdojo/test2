@@ -26,3 +26,14 @@ def main(data: daft.DataFrame) -> daft.DataFrame:
     print(f"Total records in dataset: {count}")
 
     return result
+
+
+if __name__ == "__main__":
+    print("Running main() directly...")
+    # Load CommonCrawl data using Daft's built-in function
+    data = daft.datasets.common_crawl(
+        "CC-MAIN-2024-46",
+        num_files=1,
+        in_aws=False,
+    )
+    main(data)
